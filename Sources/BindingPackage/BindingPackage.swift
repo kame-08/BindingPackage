@@ -3,7 +3,7 @@ public struct BindingPackage {
     public private(set) var text = "Hello, World!"
     
     @available(iOS 15.0, *)
-    public struct MarkdownView: View {
+    public struct BindingView: View {
         @State var stateText: String
         @Binding var bindingText: String
         
@@ -16,7 +16,6 @@ public struct BindingPackage {
                 Text(stateText)
                 TextField("", text: $bindingText)
             }
-            .padding()
         }
     }
 }
